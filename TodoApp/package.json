@@ -9,6 +9,7 @@
   "author": "Reema Kuvadia",
   "license": "ISC",
   "dependencies": {
+    "bower": "^1.6.5",
     "cli": "^0.11.1",
     "grunt": "^0.4.5"
   }
