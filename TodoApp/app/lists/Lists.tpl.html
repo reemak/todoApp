@@ -1,0 +1,8 @@
+﻿<h3>Choose an existing list or create a new list</h3>
+
+<input type="text" class="form-control" ng-model="listName" ng-disabled="true"  placeholder="Enter a name for new list" ng-submit="addToList()">
+
+
+<ul>
+    <li ng-repeat="l in lists">{{l}}</li>
+</ul>

@@ -31,6 +31,7 @@ namespace TodoApp
 
             bundles.Add(new ScriptBundle("~/app").Include(
                 "~/app/app.js"
+                ,"~/app/lists/lists.directive.js"
                 ));
         }
     }
