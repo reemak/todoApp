@@ -1,0 +1,15 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "a simple spa using angular js c# and sql server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reema Kuvadia",
+  "license": "ISC",
+  "dependencies": {
+    "cli": "^0.11.1",
+    "grunt": "^0.4.5"
+  }
+}
