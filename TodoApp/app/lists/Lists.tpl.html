@@ -1,6 +1,6 @@
 ﻿<h3>Choose an existing list or create a new list</h3>
 
-<input type="text" class="form-control" ng-model="listName" ng-disabled="true"  placeholder="Enter a name for new list" ng-submit="addToList()">
+<input type="text" class="form-control" ng-model="listName" ng-disabled="isDisabled"  placeholder="Enter a name for new list"  ng-keypress="($event.which === 13)?addToList():0">
 
 
 <ul>

@@ -13,9 +13,12 @@ namespace TodoApp.Controllers
         // GET: api/Lists
         public IEnumerable<string> Get()
         {
-            TodoAppEntities t = new TodoAppEntities();
-            List<string> li = t.getLists().ToList<string>();
-            return li;
+           using(var ctx=new TodoAppEntities())
+            {
+                List<string> li = ctx.getLists().ToList<string>();
+                return li;
+
+            }
         }
 
         // GET: api/Lists/5
@@ -25,8 +28,15 @@ namespace TodoApp.Controllers
         }
 
         // POST: api/Lists
-        public void Post([FromBody]string value)
+        public void Post([FromBody]string[] value)
         {
+            using (var ctx = new TodoAppEntities())
+            {
+                ctx.addNames(value[0]);
+               
+
+            }
+
         }
 
         // PUT: api/Lists/5

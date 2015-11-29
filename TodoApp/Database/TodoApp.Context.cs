@@ -32,5 +32,14 @@ namespace TodoApp.Database
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getLists");
         }
+    
+        public virtual int addNames(string listName)
+        {
+            var listNameParameter = listName != null ?
+                new ObjectParameter("listName", listName) :
+                new ObjectParameter("listName", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("addNames", listNameParameter);
+        }
     }
 }
