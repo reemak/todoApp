@@ -1,8 +1,7 @@
 ﻿<h3>Choose an existing list or create a new list</h3>
+<input type="text" class="form-control" ng-model="listName" ng-disabled="isDisabled" placeholder="Enter a name for new list" ng-keypress="($event.which === 13)?addToList():0">
+<br />
 
-<input type="text" class="form-control" ng-model="listName" ng-disabled="isDisabled"  placeholder="Enter a name for new list"  ng-keypress="($event.which === 13)?addToList():0">
-
-
-<ul>
-    <li ng-repeat="l in lists">{{l}}</li>
+<ul class="list-group" >
+    <li class="list-group-item" ng-repeat="l in lists" >{{l}}</li>
 </ul>
